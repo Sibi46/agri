@@ -1,0 +1,225 @@
+{% extends "base.html" %}
+
+{% block title %}SSC - Soil Soul Circle{% endblock %}
+
+{% block content %}
+<section style="background: #e0f7fa; padding: 80px 2rem 1.5rem;">
+    <div class="container">
+        <div class="section-header" style="margin-bottom: 0;">
+            <h2 style="color: #0077b6;">SOIL SOUL CIRCLE</h2>
+        </div>
+    </div>
+</section>
+
+<!-- SSC SLIDE 1 - Title -->
+<section id="ssc-slide1" class="ssc-section" style="background: #0077b6; padding-top: 3rem;">
+    <div class="container">
+        <div class="ssc-grid">
+            <div class="ssc-content">
+                <h2 style="color: white;">SOIL SOUL CIRCLE</h2>
+                <h3 style="color: #e0f7fa;">Grow Together. Farm Together. Thrive Together.</h3>
+                <p style="color: white;">SSC is for farm land owners, farming enthusiasts, land seekers, home gardeners, nature lovers, and everyone who dreams of living closer to the soil.</p>
+            </div>
+            <div>
+                <img src="{{ url_for('static', filename='uploads/soil.png') }}" alt="Soil Soul Circle">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SSC SLIDE 2 - About the Community -->
+<section id="ssc-slide2" class="ssc-section" style="background: white;">
+    <div class="container">
+        <div class="ssc-grid">
+            <div>
+                <img src="{{ url_for('static', filename='uploads/Gemini_Generated_Image_kdtyqqkdtyqqkdty (1).png') }}" alt="About Community">
+            </div>
+            <div class="ssc-content">
+                <h2 style="color: #0077b6;">A Vibrant Community Where Ideas Bloom</h2>
+                <p style="color: #555;">SSC is a collaborative platform that connects farm lovers across cities and villages. Whether you own land, dream of buying land, or simply love plants, this is the place to learn, grow, share, and build a sustainable farming lifestyle.</p>
+            </div>
+        </div>
+        <h3 style="color: #0077b6; font-size: 1.8rem; text-align: center; margin: 2rem 0 1.5rem;">Key Pillars</h3>
+        <div class="ssc-cards cols-3">
+            <div class="ssc-card" style="background: #0077b6; color: white; text-align: center;"><strong>Connect</strong>with fellow farm lovers</div>
+            <div class="ssc-card" style="background: #0077b6; color: white; text-align: center;"><strong>Collaborate</strong>through groups & co-op farming</div>
+            <div class="ssc-card" style="background: #0077b6; color: white; text-align: center;"><strong>Learn</strong>via workshops, training & expert sessions</div>
+        </div>
+        <div class="ssc-cards cols-2" style="max-width: 800px;">
+            <div class="ssc-card" style="background: #0077b6; color: white; text-align: center;"><strong>Grow</strong>your farming journey with shared resources</div>
+            <div class="ssc-card" style="background: #0077b6; color: white; text-align: center;"><strong>Sell & Buy</strong>through community-driven market access</div>
+        </div>
+    </div>
+</section>
+
+<!-- SSC SLIDE 3 - About Us -->
+<section id="ssc-slide3" class="ssc-section" style="background: #e0f7fa;">
+    <div class="container">
+        <h2 style="color: #0077b6; font-size: 2.2rem; text-align: center; margin-bottom: 2rem;">About Us</h2>
+        <div class="ssc-center-img">
+            <img src="{{ url_for('static', filename='uploads/Gemini_Generated_Image_kdtyqqkdtyqqkdty (2).png') }}" alt="About Us">
+        </div>
+        <div class="ssc-cards cols-3">
+            <div class="ssc-card" style="background: white; border-top: 4px solid #0077b6;">
+                <h3 style="color: #0077b6; margin-bottom: 0.5rem;">Who We Are</h3>
+                <p style="color: #555;">SSC is a digital and on-ground platform built for everyone who believes in sustainable living and farming. From farmland owners to new seekers, from balcony gardeners to eco-warriors, this is your community.</p>
+            </div>
+            <div class="ssc-card" style="background: white; border-top: 4px solid #0077b6;">
+                <h3 style="color: #0077b6; margin-bottom: 0.5rem;">Our Mission</h3>
+                <p style="color: #555;">To bring farm lovers together, enable collaboration, encourage learning, and create a future where farming is accessible, joyful, and profitable for all.</p>
+            </div>
+            <div class="ssc-card" style="background: white; border-top: 4px solid #0077b6;">
+                <h3 style="color: #0077b6; margin-bottom: 0.5rem;">Our Vision</h3>
+                <p style="color: #555;">A world where every individual has access to land, knowledge, and community support to grow their own food and reconnect with nature.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SSC SLIDE 4 - What We Do -->
+<section id="ssc-slide4" class="ssc-section" style="background: white;">
+    <div class="container">
+        <div class="ssc-grid" style="margin-bottom: 2rem;">
+            <div class="ssc-content">
+                <h2 style="color: #0077b6;">What We Do</h2>
+                <p style="color: #555;">We build platforms, run events, and create systems that help farm lovers connect, collaborate, and grow together.</p>
+            </div>
+            <div>
+                <img src="{{ url_for('static', filename='uploads/Gemini_Generated_Image_kdtyqqkdtyqqkdty (3).png') }}" alt="What We Do">
+            </div>
+        </div>
+        <div class="ssc-cards cols-3">
+            <div class="ssc-card" style="background: #e0f7fa; border-left: 5px solid #0077b6;"><strong style="color: #0077b6;">Platform for Networking</strong><span style="color: #555;">Create a platform for networking among farm enthusiasts</span></div>
+            <div class="ssc-card" style="background: #e0f7fa; border-left: 5px solid #0077b6;"><strong style="color: #0077b6;">Workshops & Events</strong><span style="color: #555;">Organise workshops, farm visits, and community events</span></div>
+            <div class="ssc-card" style="background: #e0f7fa; border-left: 5px solid #0077b6;"><strong style="color: #0077b6;">Co-Op Farming Models</strong><span style="color: #555;">Build co-op farming models for shared farming</span></div>
+            <div class="ssc-card" style="background: #e0f7fa; border-left: 5px solid #0077b6;"><strong style="color: #0077b6;">Guidance & Mentorship</strong><span style="color: #555;">Support new farm owners through guidance and mentorship</span></div>
+            <div class="ssc-card" style="background: #e0f7fa; border-left: 5px solid #0077b6;"><strong style="color: #0077b6;">Resource Sharing</strong><span style="color: #555;">Facilitate resource sharing: tools, seeds, equipment, labour</span></div>
+            <div class="ssc-card" style="background: #e0f7fa; border-left: 5px solid #0077b6;"><strong style="color: #0077b6;">Market Linkages</strong><span style="color: #555;">Provide market linkages to sell produce together</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- SSC SLIDE 5 - Membership -->
+<section id="ssc-slide5" class="ssc-section" style="background: #e0f7fa;">
+    <div class="container">
+        <h2 style="color: #0077b6; font-size: 2.2rem; text-align: center; margin-bottom: 2rem;">Membership</h2>
+        <div class="ssc-center-img">
+            <img src="{{ url_for('static', filename='uploads/Gemini_Generated_Image_kdtyqqkdtyqqkdty (4).png') }}" alt="Membership">
+        </div>
+        <div class="ssc-cards cols-3">
+            <div class="ssc-card" style="background: #0077b6; color: white;"><strong style="color: #e0f7fa;">Farm Land Owners</strong>Share land, knowledge, tools, and farming opportunities.</div>
+            <div class="ssc-card" style="background: #0077b6; color: white;"><strong style="color: #e0f7fa;">Farming Enthusiasts</strong>Learn, explore, and start your farming journey.</div>
+            <div class="ssc-card" style="background: #0077b6; color: white;"><strong style="color: #e0f7fa;">Farm Land Seekers</strong>Find, connect, and explore opportunities to buy/lease land.</div>
+            <div class="ssc-card" style="background: #0077b6; color: white;"><strong style="color: #e0f7fa;">Home Gardeners</strong>From balcony gardens to terrace farms, share tips &amp; grow.</div>
+            <div class="ssc-card" style="background: #0077b6; color: white;"><strong style="color: #e0f7fa;">Farm Lovers</strong>Just love farms? Join events, farm stays, and activities.</div>
+            <div class="ssc-card" style="background: #0077b6; color: white;"><strong style="color: #e0f7fa;">Nature Lovers</strong>Participate in eco-walks, tree planting, conservation programs.</div>
+        </div>
+    </div>
+</section>
+
+<!-- SSC SLIDE 6 - Membership Benefits -->
+<section id="ssc-slide6" class="ssc-section" style="background: white;">
+    <div class="container">
+        <div class="ssc-grid">
+            <div>
+                <img src="{{ url_for('static', filename='uploads/Gemini_Generated_Image_kdtyqqkdtyqqkdty (5).png') }}" alt="Membership Benefits">
+            </div>
+            <div class="ssc-content">
+                <h2 style="color: #0077b6;">Membership Benefits</h2>
+                <div class="ssc-benefits" style="margin-top: 1.5rem;">
+                    <div class="ssc-benefit">&#10003; Access to all forums & groups</div>
+                    <div class="ssc-benefit">&#10003; Priority event access</div>
+                    <div class="ssc-benefit">&#10003; Resource-sharing network</div>
+                    <div class="ssc-benefit">&#10003; Co-op farming opportunities</div>
+                    <div class="ssc-benefit">&#10003; Learning materials</div>
+                    <div class="ssc-benefit">&#10003; Discounts on workshops</div>
+                    <div class="ssc-benefit" style="grid-column: span 2;">&#10003; Exclusive community market access</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SSC SLIDE 7 - How It Works -->
+<section id="ssc-slide7" class="ssc-section" style="background: #e0f7fa;">
+    <div class="container">
+        <h2 style="color: #0077b6; font-size: 2.2rem; text-align: center; margin-bottom: 2rem;">How It Works</h2>
+        <div class="ssc-center-img">
+            <img src="{{ url_for('static', filename='uploads/Gemini_Generated_Image_kdtyqqkdtyqqkdty (6).png') }}" alt="How It Works">
+        </div>
+        <div class="ssc-steps">
+            <div class="ssc-step"><div class="ssc-step-num">1</div><div><h3 style="color: #0077b6; font-size: 1.8rem; margin-bottom: 0.3rem;">Join the Community</h3><p style="color: #555; font-size: 1.5rem;">Create your profile and choose your interests.</p></div></div>
+            <div class="ssc-step"><div class="ssc-step-num">2</div><div><h3 style="color: #0077b6; font-size: 1.8rem; margin-bottom: 0.3rem;">Connect With Groups</h3><p style="color: #555; font-size: 1.5rem;">Join groups based on farming style, location, crops, or expertise.</p></div></div>
+            <div class="ssc-step"><div class="ssc-step-num">3</div><div><h3 style="color: #0077b6; font-size: 1.8rem; margin-bottom: 0.3rem;">Share & Learn</h3><p style="color: #555; font-size: 1.5rem;">Post questions, ideas, photos, success stories, problems & solutions.</p></div></div>
+            <div class="ssc-step"><div class="ssc-step-num">4</div><div><h3 style="color: #0077b6; font-size: 1.8rem; margin-bottom: 0.3rem;">Participate in Events</h3><p style="color: #555; font-size: 1.5rem;">Workshops, farm visits, bootcamps, co-op farming days, markets & more.</p></div></div>
+            <div class="ssc-step"><div class="ssc-step-num">5</div><div><h3 style="color: #0077b6; font-size: 1.8rem; margin-bottom: 0.3rem;">Collaborate</h3><p style="color: #555; font-size: 1.5rem;">Share resources, buy/sell tools, form co-op teams, co-own farms.</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- SSC SLIDE 8 - Features -->
+<section id="ssc-slide8" class="ssc-section" style="background: white;">
+    <div class="container">
+        <div class="ssc-grid" style="margin-bottom: 2rem;">
+            <div class="ssc-content">
+                <h2 style="color: #0077b6;">Features</h2>
+                <p style="color: #555;">Everything you need to connect, learn, and grow as part of the SSC community.</p>
+            </div>
+            <div>
+                <img src="{{ url_for('static', filename='uploads/Gemini_Generated_Image_kdtyqqkdtyqqkdty (7).png') }}" alt="Features">
+            </div>
+        </div>
+        <div class="ssc-cards cols-3">
+            <div class="ssc-card" style="background: #e0f7fa; border-top: 4px solid #0077b6;"><strong style="color: #0077b6;">Discussion Forum</strong><span style="color: #555;">Ask questions, exchange tips, and discuss farming practices.</span></div>
+            <div class="ssc-card" style="background: #e0f7fa; border-top: 4px solid #0077b6;"><strong style="color: #0077b6;">Events & Meetups</strong><span style="color: #555;">Organic farming workshops, farm visits, nature walks, gardening sessions.</span></div>
+            <div class="ssc-card" style="background: #e0f7fa; border-top: 4px solid #0077b6;"><strong style="color: #0077b6;">Co-Op Farming Groups</strong><span style="color: #555;">Form groups to grow crops together, share profits, share learning.</span></div>
+            <div class="ssc-card" style="background: #e0f7fa; border-top: 4px solid #0077b6;"><strong style="color: #0077b6;">Marketplace Access</strong><span style="color: #555;">Sell produce as a community to get better prices.</span></div>
+            <div class="ssc-card" style="background: #e0f7fa; border-top: 4px solid #0077b6;"><strong style="color: #0077b6;">Resource Sharing</strong><span style="color: #555;">Tools, seeds, compost, machinery, labour pool & more.</span></div>
+            <div class="ssc-card" style="background: #e0f7fa; border-top: 4px solid #0077b6;"><strong style="color: #0077b6;">Land Connect</strong><span style="color: #555;">A secure space for farmland owners and seekers to connect with trust.</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- SSC SLIDE 9 - Events -->
+<section id="ssc-slide9" class="ssc-section" style="background: #e0f7fa;">
+    <div class="container">
+        <h2 style="color: #0077b6; font-size: 2.2rem; text-align: center; margin-bottom: 2rem;">Events</h2>
+        <div class="ssc-center-img">
+            <img src="{{ url_for('static', filename='uploads/Gemini_Generated_Image_kdtyqqkdtyqqkdty (8).png') }}" alt="Events">
+        </div>
+        <div class="ssc-cards cols-3">
+            <div class="ssc-card" style="background: #0077b6; color: white; text-align: center; font-weight: 600;">Urban Farmers Meetup</div>
+            <div class="ssc-card" style="background: #0077b6; color: white; text-align: center; font-weight: 600;">Co-Op Farming Day</div>
+            <div class="ssc-card" style="background: #0077b6; color: white; text-align: center; font-weight: 600;">Soil Care Workshop</div>
+            <div class="ssc-card" style="background: #0077b6; color: white; text-align: center; font-weight: 600;">Organic Farming Masterclass</div>
+            <div class="ssc-card" style="background: #0077b6; color: white; text-align: center; font-weight: 600;">Farm Visit & Knowledge Tour</div>
+            <div class="ssc-card" style="background: #0077b6; color: white; text-align: center; font-weight: 600;">Seed Swap Festival</div>
+            <div class="ssc-card" style="background: #0077b6; color: white; text-align: center; font-weight: 600;">Urban Gardeners Bootcamp</div>
+        </div>
+    </div>
+</section>
+
+<!-- SSC SLIDE 10 - Groups -->
+<section id="ssc-slide10" class="ssc-section" style="background: white;">
+    <div class="container">
+        <div class="ssc-grid" style="margin-bottom: 2rem;">
+            <div>
+                <img src="{{ url_for('static', filename='uploads/Gemini_Generated_Image_kdtyqqkdtyqqkdty (9).png') }}" alt="Groups">
+            </div>
+            <div class="ssc-content">
+                <h2 style="color: #0077b6;">Groups</h2>
+                <p style="color: #555;">Join a group that matches your farming interest and location.</p>
+            </div>
+        </div>
+        <div class="ssc-cards cols-3">
+            <div class="ssc-card" style="background: #0077b6; color: white; text-align: center; font-weight: 600;">Organic Farmers Group</div>
+            <div class="ssc-card" style="background: #0077b6; color: white; text-align: center; font-weight: 600;">Terrace Gardeners Club</div>
+            <div class="ssc-card" style="background: #0077b6; color: white; text-align: center; font-weight: 600;">Co-Op Rice Farming Team</div>
+            <div class="ssc-card" style="background: #0077b6; color: white; text-align: center; font-weight: 600;">Beginners Farming Help Group</div>
+            <div class="ssc-card" style="background: #0077b6; color: white; text-align: center; font-weight: 600;">Farm Equipment Sharing Network</div>
+            <div class="ssc-card" style="background: #0077b6; color: white; text-align: center; font-weight: 600;">Women's Farming Collective</div>
+            <div class="ssc-card" style="background: #0077b6; color: white; text-align: center; font-weight: 600;">Nature Walks & Trekking Group</div>
+        </div>
+    </div>
+</section>
+{% endblock %}

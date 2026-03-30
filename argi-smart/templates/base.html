@@ -24,37 +24,41 @@
 <body>
     <nav>
         <div class="nav-container">
-            <a href="#home" class="logo">🌾 Argi Smart</a>
+            <a href="/" class="logo">🌱 SOIL SOUL CIRCLE</a>
             <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home" onclick="closeMenu()">Home</a></li>
-                <li><a href="#purpose" onclick="closeMenu()">Purpose</a></li>
-                <li><a href="#program" onclick="closeMenu()">Program</a></li>
-                <li><a href="#partner" onclick="closeMenu()">Partner</a></li>
-                <li><a href="#tourism" onclick="closeMenu()">Tourism</a></li>
-                <li><a href="#festival" onclick="closeMenu()">Festival</a></li>
-                <li><a href="#faq" onclick="closeMenu()">FAQ</a></li>
-                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
-                <li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
                 <li class="ssc-dropdown">
-                    <a href="#ssc" onclick="toggleSSC(event)">SSC ▾</a>
-                    <ul class="ssc-submenu">
-                        <li><a href="#ssc-slide1" onclick="closeMenu()">Title</a></li>
-                        <li><a href="#ssc-slide2" onclick="closeMenu()">About Community</a></li>
-                        <li><a href="#ssc-slide3" onclick="closeMenu()">About Us</a></li>
-                        <li><a href="#ssc-slide4" onclick="closeMenu()">What We Do</a></li>
-                        <li><a href="#ssc-slide5" onclick="closeMenu()">Membership</a></li>
-                        <li><a href="#ssc-slide6" onclick="closeMenu()">Membership Benefits</a></li>
-                        <li><a href="#ssc-slide7" onclick="closeMenu()">How It Works</a></li>
-                        <li><a href="#ssc-slide8" onclick="closeMenu()">Features</a></li>
-                        <li><a href="#ssc-slide9" onclick="closeMenu()">Events</a></li>
-                        <li><a href="#ssc-slide10" onclick="closeMenu()">Groups</a></li>
+                    <a href="/ssc" onclick="toggleDropdown(event, 'ssc-submenu')">SSC ▾</a>
+                    <ul class="ssc-submenu" id="ssc-submenu">
+                        <li><a href="/ssc#ssc-slide1" onclick="closeMenu()">Title</a></li>
+                        <li><a href="/ssc#ssc-slide2" onclick="closeMenu()">About Community</a></li>
+                        <li><a href="/ssc#ssc-slide3" onclick="closeMenu()">About Us</a></li>
+                        <li><a href="/ssc#ssc-slide4" onclick="closeMenu()">What We Do</a></li>
+                        <li><a href="/ssc#ssc-slide5" onclick="closeMenu()">Membership</a></li>
+                        <li><a href="/ssc#ssc-slide6" onclick="closeMenu()">Membership Benefits</a></li>
+                        <li><a href="/ssc#ssc-slide7" onclick="closeMenu()">How It Works</a></li>
+                        <li><a href="/ssc#ssc-slide8" onclick="closeMenu()">Features</a></li>
+                        <li><a href="/ssc#ssc-slide9" onclick="closeMenu()">Events</a></li>
+                        <li><a href="/ssc#ssc-slide10" onclick="closeMenu()">Groups</a></li>
                     </ul>
                 </li>
+                <li class="ssc-dropdown">
+                    <a href="/gurukul" onclick="toggleDropdown(event, 'gurukul-submenu')">Gurukul ▾</a>
+                    <ul class="ssc-submenu" id="gurukul-submenu">
+                        <li><a href="/gurukul#purpose" onclick="closeMenu()">Purpose</a></li>
+                        <li><a href="/gurukul#program" onclick="closeMenu()">Program</a></li>
+                        <li><a href="/gurukul#partner" onclick="closeMenu()">Partner</a></li>
+                        <li><a href="/gurukul#tourism" onclick="closeMenu()">Tourism</a></li>
+                        <li><a href="/gurukul#festival" onclick="closeMenu()">Festival</a></li>
+                        <li><a href="/gurukul#faq" onclick="closeMenu()">FAQ</a></li>
+                    </ul>
+                </li>
+                <li><a href="/gurukul#contact" onclick="closeMenu()">Contact</a></li>
+                <li><a href="/gurukul#gallery" onclick="closeMenu()">Gallery</a></li>
                 <li><a href="/admin/login" onclick="closeMenu()">Admin</a></li>
             </ul>
         </div>
@@ -70,10 +74,10 @@
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
-                <a href="#home">Home</a>
-                <a href="#faq">FAQ</a>
-                <a href="#contact">Contact</a>
-                <a href="#gallery">Gallery</a>
+                <a href="/">Home</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/#contact">Contact</a>
+                <a href="/#gallery">Gallery</a>
             </div>
             <div class="footer-col">
                 <h4>Contact</h4>
@@ -88,12 +92,16 @@
     </footer>
 
     <script>
-        function toggleSSC(e) {
+        function toggleDropdown(e, id) {
             const isMobile = window.innerWidth <= 768;
             if (isMobile) {
                 e.preventDefault();
                 e.stopPropagation();
-                document.querySelector('.ssc-dropdown').classList.toggle('open');
+                const submenu = document.getElementById(id);
+                const isOpen = submenu.style.display === 'block';
+                // close all submenus first
+                document.querySelectorAll('.ssc-submenu').forEach(s => s.style.display = 'none');
+                submenu.style.display = isOpen ? 'none' : 'block';
             }
         }
 

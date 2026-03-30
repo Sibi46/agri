@@ -35,6 +35,10 @@ def save_data(data):
 
 @app.route('/')
 def home():
+    return redirect('/ssc')
+
+@app.route('/gurukul')
+def gurukul():
     data = load_data()
     return render_template('index.html', photos=data['photos'], videos=data['videos'])
 
@@ -65,6 +69,10 @@ def team():
 @app.route('/faq')
 def faq():
     return render_template('faq.html')
+
+@app.route('/ssc')
+def ssc():
+    return render_template('ssc.html')
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
