@@ -10,15 +10,15 @@ app.secret_key = 'argi_smart_secret_key'
 ADMIN_PHONE = '9035033443'
 ADMIN_OTP = '123456'
 
-UPLOAD_FOLDER = 'static/uploads'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+UPLOAD_FOLDER = os.path.join(BASE_DIR, 'static', 'uploads')
+DATA_FILE = os.path.join(BASE_DIR, 'data.json')
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'mp4', 'avi', 'mov'}
 
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
-DATA_FILE = 'data.json'
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -41,6 +41,10 @@ def home():
 def gurukul():
     data = load_data()
     return render_template('index.html', photos=data['photos'], videos=data['videos'])
+
+@app.route('/ssc')
+def ssc():
+    return render_template('ssc.html')
 
 @app.route('/purpose')
 def purpose():
@@ -70,10 +74,6 @@ def team():
 def faq():
     return render_template('faq.html')
 
-@app.route('/ssc')
-def ssc():
-    return render_template('ssc.html')
-
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
@@ -81,18 +81,16 @@ def contact():
         email = request.form.get('email')
         subject = request.form.get('subject')
         message = request.form.get('message')
-        
-        # Validate message word count
+
         word_count = len(message.split())
         if word_count > 30:
             flash('Message must be 30 words or less!', 'error')
-            return redirect('/#contact')
-        
-        # Save message to file
+            return redirect('/gurukul#contact')
+
         data = load_data()
         if 'messages' not in data:
             data['messages'] = []
-        
+
         data['messages'].append({
             'name': name,
             'email': email,
@@ -101,10 +99,10 @@ def contact():
             'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         })
         save_data(data)
-        
+
         flash('Message sent successfully!', 'success')
-        return redirect('/#contact')
-    
+        return redirect('/gurukul#contact')
+
     return render_template('contact.html')
 
 @app.route('/photos')
@@ -141,25 +139,20 @@ def admin_dashboard():
 def add_photo():
     if not session.get('admin'):
         return redirect('/admin/login')
-    
     if 'file' not in request.files:
         return redirect('/admin/dashboard')
-    
     file = request.files['file']
     if file.filename == '' or not allowed_file(file.filename):
         return redirect('/admin/dashboard')
-    
     filename = secure_filename(file.filename)
     filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
     file.save(filepath)
-    
     data = load_data()
-    photo = {
+    data['photos'].append({
         'url': f'/static/uploads/{filename}',
         'title': request.form.get('title'),
         'description': request.form.get('description')
-    }
-    data['photos'].append(photo)
+    })
     save_data(data)
     return redirect('/admin/dashboard')
 
@@ -167,25 +160,20 @@ def add_photo():
 def add_video():
     if not session.get('admin'):
         return redirect('/admin/login')
-    
     if 'file' not in request.files:
         return redirect('/admin/dashboard')
-    
     file = request.files['file']
     if file.filename == '' or not allowed_file(file.filename):
         return redirect('/admin/dashboard')
-    
     filename = secure_filename(file.filename)
     filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
     file.save(filepath)
-    
     data = load_data()
-    video = {
+    data['videos'].append({
         'url': f'/static/uploads/{filename}',
         'title': request.form.get('title'),
         'description': request.form.get('description')
-    }
-    data['videos'].append(video)
+    })
     save_data(data)
     return redirect('/admin/dashboard')
 
