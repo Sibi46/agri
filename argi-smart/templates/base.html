@@ -24,17 +24,18 @@
 <body>
     <nav>
         <div class="nav-container">
-            <a href="/" class="logo">🌱 SOIL SOUL CIRCLE</a>
+            <a href="/" class="logo">SOIL SOUL CIRCLE</a>
             <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-links" id="navLinks">
+                <li><a href="/" onclick="closeMenu()">Home</a></li>
                 <li class="ssc-dropdown">
-                    <a href="/ssc" onclick="toggleDropdown(event, 'ssc-submenu')">SSC ▾</a>
+                    <a href="/ssc" onclick="toggleDropdown(event, 'ssc-submenu')">SSC &#9662;</a>
                     <ul class="ssc-submenu" id="ssc-submenu">
-                        <li><a href="/ssc#ssc-slide1" onclick="closeMenu()">Title</a></li>
+                        <li><a href="/ssc#ssc-slide1" onclick="closeMenu()">Home</a></li>
                         <li><a href="/ssc#ssc-slide2" onclick="closeMenu()">About Community</a></li>
                         <li><a href="/ssc#ssc-slide3" onclick="closeMenu()">About Us</a></li>
                         <li><a href="/ssc#ssc-slide4" onclick="closeMenu()">What We Do</a></li>
@@ -47,7 +48,7 @@
                     </ul>
                 </li>
                 <li class="ssc-dropdown">
-                    <a href="/gurukul" onclick="toggleDropdown(event, 'gurukul-submenu')">Gurukul ▾</a>
+                    <a href="/gurukul" onclick="toggleDropdown(event, 'gurukul-submenu')">Gurukul &#9662;</a>
                     <ul class="ssc-submenu" id="gurukul-submenu">
                         <li><a href="/gurukul#purpose" onclick="closeMenu()">Purpose</a></li>
                         <li><a href="/gurukul#program" onclick="closeMenu()">Program</a></li>
@@ -81,13 +82,13 @@
             </div>
             <div class="footer-col">
                 <h4>Contact</h4>
-                <p style="color: #aaa;">📧 aozoiselo@gmail.com</p>
-                <p style="color: #aaa;">📞 +91 9035033443</p>
-                <p style="color: #aaa;">📍 Vandavasi Melnarma, Tamil Nadu 604408</p>
+                <p style="color: #aaa;">aozoiselo@gmail.com</p>
+                <p style="color: #aaa;">+91 9035033443</p>
+                <p style="color: #aaa;">Vandavasi Melnarma, Tamil Nadu 604408</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Argi Smart. All Rights Reserved</p>
+            <p>&copy; 2026 Argi Smart. All Rights Reserved</p>
         </div>
     </footer>
 
@@ -147,14 +148,7 @@
         });
 
         function createLeaf() {
-            const leaf = document.createElement('div');
-            leaf.className = 'leaf';
-            leaf.innerHTML = ['🍃', '🌿', '🌾'][Math.floor(Math.random() * 3)];
-            leaf.style.left = Math.random() * 100 + 'vw';
-            leaf.style.animationDuration = (Math.random() * 3 + 5) + 's';
-            leaf.style.opacity = Math.random() * 0.5 + 0.3;
-            document.body.appendChild(leaf);
-            setTimeout(() => leaf.remove(), 8000);
+            // leaves disabled
         }
         setInterval(createLeaf, 2000);
     </script>
